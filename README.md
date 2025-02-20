@@ -24,7 +24,7 @@
   ```
 
 ## Tutorial
-- [Langgraph Tutorial](https://blog.futuresmart.ai/langgraph-tutorial-for-beginners)
+- [Langgraph Tutorial](https://blog.futuresmart.ai/langgraph-tutorial-for-beginners), [more](https://github.com/langchain-ai/langchain-academy)
 
 ## Reference
 - [Universal API Engine](https://github.com/esxr/langgraph-mcp),[more](https://medium.com/heurislabs/building-a-universal-assistant-to-connect-with-any-api-89d7c353e524)
