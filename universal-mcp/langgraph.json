@@ -1,0 +1,6 @@
+{
+    "graphs": {
+      "your_graph_name": "hello_graph.py"
+    },
+    "env": ".env"
+  }

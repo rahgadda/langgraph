@@ -10,14 +10,17 @@
   cd universal-mcp
   python3 -m venv .venv
   source .venv/bin/activate
+
+  # Add API Keys for HUGGINGFACEHUB_API_TOKEN or GROQ_API_KEY
   touch .env
+  
   pip install -U "langgraph-cli[inmem]" langgraph asyncio langchain langchain-core langchain-huggingface langchain-groq mcp python-dotenv langchain-mcp-adapters
 
   # Testing Environment Setup
   python hello.py
 
   # Running Langgraph
-  
+  langgraph serve
   ```
 
 ## Reference
