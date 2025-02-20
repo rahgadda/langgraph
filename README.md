@@ -20,7 +20,7 @@
   python hello.py
 
   # Running Langgraph
-  langgraph serve
+  langgraph dev
   ```
 
 ## Reference

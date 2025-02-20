@@ -1,6 +1,7 @@
 {
+    "dependencies": ["."],
     "graphs": {
-      "your_graph_name": "hello_graph.py"
+      "your_graph_name": "/workspace/langraph/universal-mcp/hello_graph.py:graph"
     },
     "env": ".env"
-  }
+}
