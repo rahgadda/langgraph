@@ -10,7 +10,14 @@
   cd universal-mcp
   python3 -m venv .venv
   source .venv/bin/activate
-  pip install -U "langgraph-cli[inmem]"
+  touch .env
+  pip install -U "langgraph-cli[inmem]" langgraph asyncio langchain langchain-core langchain-huggingface langchain-groq mcp python-dotenv langchain-mcp-adapters
+
+  # Testing Environment Setup
+  python hello.py
+
+  # Running Langgraph
+  
   ```
 
 ## Reference
