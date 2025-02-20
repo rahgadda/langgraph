@@ -1,19 +1,22 @@
-from langgraph import StateGraph, Node
+from typing import Annotated
+from typing_extensions import TypedDict
 
-def print_hello():
-    print("Hello, World!")
+from langgraph.graph import StateGraph, START, END
+from langgraph.graph.message import add_messages
 
-# Create a StateGraph object
-workflow = StateGraph()
+class State(TypedDict):
+    # Messages have the type "list". The `add_messages` function
+    # in the annotation defines how this state key should be updated
+    # (in this case, it appends messages to the list, rather than overwriting them)
+    messages: Annotated[list, add_messages]
 
-# Add a single node called "print_node" with the print_hello function
-workflow.add_node("print_node", print_hello) 
+graph_builder = StateGraph(State)
 
-# Set the entry point of the graph to "print_node"
-workflow.set_entry_point("print_node")
+def chatbot(state: State):
+    return {"messages": "HelloWorld"}
 
-# Compile the graph
-app = workflow.compile()
+graph_builder.add_node("chatbot", chatbot)
+graph_builder.add_edge(START, "chatbot")
+graph_builder.add_edge("chatbot", END)
 
-# Run the graph (this will execute the "print_hello" function)
-app.run() 
+graph = graph_builder.compile()
