@@ -13,7 +13,7 @@ class State(TypedDict):
 graph_builder = StateGraph(State)
 
 def chatbot(state: State):
-    return {"messages": "HelloWorld"}
+    return {"messages": "Hello " + str(state.get("messages", [])[-1].content)}
 
 graph_builder.add_node("chatbot", chatbot)
 graph_builder.add_edge(START, "chatbot")

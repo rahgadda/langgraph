@@ -14,7 +14,7 @@
   # Add API Keys for HUGGINGFACEHUB_API_TOKEN or GROQ_API_KEY
   touch .env
   
-  pip install -U "langgraph-cli[inmem]" langgraph asyncio langchain langchain-core langchain-huggingface langchain-groq mcp python-dotenv langchain-mcp-adapters
+  pip install -U "langgraph-cli[inmem]"
 
   # Testing Environment Setup
   python hello.py
@@ -22,6 +22,9 @@
   # Running Langgraph
   langgraph dev
   ```
+
+## Tutorial
+- [Langgraph Tutorial](https://blog.futuresmart.ai/langgraph-tutorial-for-beginners)
 
 ## Reference
 - [Universal API Engine](https://github.com/esxr/langgraph-mcp),[more](https://medium.com/heurislabs/building-a-universal-assistant-to-connect-with-any-api-89d7c353e524)
